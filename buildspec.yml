@@ -3,7 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-        - python -m pip install Flask
+        - sudo add-apt-repository ppa:deadsnakes/ppa
+        - sudo apt-get update
+        - sudo apt-get install python3.6
+        - sudo apt install python3-pip
+        - sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+        - sudo pip3 install Flask
   build:
     commands:
       - echo Build started on `date`
