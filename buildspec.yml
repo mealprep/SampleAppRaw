@@ -16,7 +16,7 @@ phases:
       - echo Compiling the Python code...
       - . flask/bin/activate
       - pip3 install flask
-      - python3.6 -m test_app.py
+      - python test_app.py
   post_build:
     commands:
       - echo Build completed on `date`
