@@ -5,6 +5,10 @@ files:
     destination: /var/www/html
 hooks:
   BeforeInstall:
-  AfterInstall:
+    - location: scripts/npminstall.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
-  ValidateService:
+    - location: scripts/npmstart.sh
+      timeout: 300
+      runas: root
