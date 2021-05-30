@@ -1,1 +1,1 @@
-sudo install npm
+sudo yum install npm
