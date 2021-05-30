@@ -13,6 +13,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Python code...
+      - sudo . venv/bin/activate
       - python3.6 -m test_app.py
   post_build:
     commands:
