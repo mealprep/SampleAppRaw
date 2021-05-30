@@ -26,4 +26,6 @@ artifacts:
     - tsconfig.prod.json
     - tsconfig.test.json
     - '**/*'
-  base-directory: [public, src]
+  base-directory: "public"
+    - '**/*'
+  base-directory: "src"
