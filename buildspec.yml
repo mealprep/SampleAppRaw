@@ -9,17 +9,21 @@ phases:
         - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
         - sudo python3.6 get-pip.py
         - sudo apt-get install python3.6-venv
-        - python3.6 -m venv flask
+        - sudo npm install
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Python code...
-      - . flask/bin/activate
-      - pip3 install flask
+      - npm start
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
+    - jsconfig.json
+    - package.json
+    - tsconfig.json
+    - tsconfig.prod.json
+    - tsconfig.test.json
     - '**/*'
-  base-directory: 'SampleAppRaw'
+  base-directory: [public, src]
