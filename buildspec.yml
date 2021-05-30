@@ -20,5 +20,12 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
+    - jsconfig.json
+    - package.json
+    - tsconfig.json
+    - tsconfig.prod.json
+    - tsconfig.test.json
     - '**/*'
-  base-directory: 'dist'
+  base-directory: "public"
+    - '**/*'
+  base-directory: "src"
