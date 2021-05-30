@@ -3,12 +3,6 @@ version: 0.2
 phases:
   install:
     commands:
-        - sudo add-apt-repository ppa:deadsnakes/ppa
-        - sudo apt-get update
-        - sudo apt-get install python3.6 -y
-        - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-        - sudo python3.6 get-pip.py
-        - sudo apt-get install python3.6-venv
   build:
     commands:
       - echo Build started on `date`
