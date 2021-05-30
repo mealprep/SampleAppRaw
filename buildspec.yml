@@ -9,13 +9,14 @@ phases:
         - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
         - sudo python3.6 get-pip.py
         - sudo apt-get install python3.6-venv
-        - python3.6 -m pip install Flask
-        - python3.6 -m venv env
-        - . env/bin/activate
+        - python3.6 -m venv flask
+        - cd flask
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Python code...
+      - . bin/activate
+      - pip3 install flask
       - python3.6 -m test_app.py
   post_build:
     commands:
