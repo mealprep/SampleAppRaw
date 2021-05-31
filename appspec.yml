@@ -3,12 +3,3 @@ os: linux
 files:
   - source: /
     destination: /var/www/html
-hooks:
-  BeforeInstall:
-    - location: scripts/npminstall.sh
-      timeout: 300
-      runas: root
-  ApplicationStart:
-    - location: scripts/npmstart.sh
-      timeout: 300
-      runas: root
